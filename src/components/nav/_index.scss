@@ -1,0 +1,50 @@
+.main-nav {
+
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    z-index: 3;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__links {
+        display: flex;
+        align-items: center;
+
+        ul {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__link {
+        color: $text-secondary;
+        text-decoration: none;
+        margin-right: 1.5rem;
+        transition: $transition-all;
+        font-size: 0.875rem;
+        line-height: 1.714em;
+        font-weight: 500;
+        &:hover {
+            color: $accent;
+        }
+        &--account {
+            color: $accent;
+            &:hover {
+                color: darken($accent, 13%)
+            }
+        }
+        @include tablet-lg {
+            font-size: 0.8rem;
+            margin-right: 1.2rem;
+        }
+    }
+}

@@ -1,0 +1,29 @@
+import logo from '../../assets/img/icons/logo.svg'
+
+export const Navigation = () => {
+
+const NAV_LINKS = [{id: 'features', name: 'Features', link: '#', }, {id: 'pricing', name: 'Pricing', link: '#', }, {id: 'apps', name: 'Apps', link: '#', }, {id: 'blog', name: 'Blog', link: '#', }, {id:'help', name: 'Help', link: '#', }];
+
+  return (
+    <nav className='main-nav'>
+        <div className="container">
+        <a href="/" className='main-nav__logo'><img src={logo} alt="nord logo" /></a>
+        <div className="main-nav__links">
+            <ul>
+                {
+                    NAV_LINKS.map(({ id, name, link })=>(
+        
+                        <li key={id}><a href={link} className={'main-nav__link'} id={id}>{name}</a></li>
+                    
+                    ))
+                }
+                <li><a href="#" className='main-nav__link main-nav__link--account'>My account</a></li>
+            
+            </ul>
+            <a href="#" className="button button--primary button--sm">Open Vault</a>
+        </div>
+        </div> 
+    </nav>
+  )
+}
+
