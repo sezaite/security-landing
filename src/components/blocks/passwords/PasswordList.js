@@ -18,7 +18,8 @@ const [showAll, setShowAll] = useState(false);
     return (
         <>
             <table className="password-list-table">
-                    {
+                <tbody>
+                {
                         showAll ? 
 
                         data.passwords.map((data, index)=> (
@@ -40,6 +41,8 @@ const [showAll, setShowAll] = useState(false);
 
 
                     }
+                </tbody>
+                    
         
                 
             </table>     
