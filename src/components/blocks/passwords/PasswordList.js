@@ -1,17 +1,50 @@
-import React, { useEffect, useState } from 'react'
-
-export const PasswordList = () => {
-
-    const [passwords, setPasswords] = useState({status: 'unloaded', passwords: {}});
-
-useEffect(()=>{
-
-}, []);
+import { useState } from "react"
 
 
-return <>
-    {
-        passwords.status === 'loaded'  ? <div className="password-list"><button type='button' className='button'>Load more</button></div> : <div className="loader">Loading...</div>    
-    }
-     </>
+export const PasswordList = ({data, sort}) => {
+
+switch(sort) {
+    case 'count':
+      data.passwords.sort((a, b) => b.count - a.count);
+      break;
+    case 'abc':
+      data.passwords.sort((a, b) => a.value.localeCompare(b.value));
+      break;
+    default:
+      console.error('Err: unrecognized sort type');
+  }
+
+const [showAll, setShowAll] = useState(false);
+    return (
+        <>
+            <table className="password-list-table">
+                    {
+                        showAll ? 
+
+                        data.passwords.map((data, index)=> (
+                            <tr key={data.value}>
+                                <td>{index + 1}.</td>
+                                <td>{data.value}</td>
+                                <td>{data.count}</td>
+                            </tr>
+                        )) :
+
+                        data.passwords.slice(0, 10).map((data, index)=> (
+
+                            <tr key={data.value}>
+                                <td>{index + 1}.</td>
+                                <td>{data.value}</td>
+                                <td>{data.count}</td>
+                            </tr>
+                        ))
+
+
+                    }
+        
+                
+            </table>     
+            <button type='button' className='button button--primary mx-auto' onClick={(e) => setShowAll(!showAll)}>{showAll ? 'Show less' : 'Show all (50)'}</button>
+        </>
+    
+    )
 }

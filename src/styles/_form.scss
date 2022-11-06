@@ -1,10 +1,20 @@
 .select {
+    font-size: 1rem;
     border: 1px solid #B9BABD;
     border-radius: $theme-radius;
     width: 100%;
-    
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('../assets/img/icons/chevron-down-trangle.svg');
+    background-repeat: no-repeat;
+    background-position: 95% center;
+    background-size: 8px 5px;
+
     &--sm {
         max-width: 16.3125rem;
         height: 2.625rem;
+        padding: 7px 18px 7px 15px;
     }
 }
+

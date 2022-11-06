@@ -6,7 +6,7 @@ button {
 }
 
 .button {
-
+    cursor: pointer;
     &--primary {
         display: flex;
         align-items: center;

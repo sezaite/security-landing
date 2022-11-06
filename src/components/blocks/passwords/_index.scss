@@ -1,0 +1,46 @@
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h4 {
+        margin-right: 2rem;
+        @include mobile {
+            font-size: 1rem;
+        }
+    }
+    select.select {
+        @include mobile {
+            max-width: 10rem;
+        }
+    }
+}
+
+.password-list-table {
+    width: 100%;
+    border-top: $table-border;
+    margin-top: 1.9375rem;
+    margin-bottom: 2.25rem;
+    tr {
+       
+        td {
+            border-bottom: $table-border;
+            padding: 1.5rem 0;
+            font-size: 1rem;
+            line-height: 1.5em;
+            @include mobile {
+                font-size: 0.8rem;
+            }
+            &:first-of-type {
+                width: 40px;
+            }
+            &:nth-of-type(2) {
+                font-weight: 700;
+            }
+            &:last-of-type {
+                text-align: end;
+            }
+        }
+    }
+}
+
