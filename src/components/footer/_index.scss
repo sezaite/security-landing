@@ -1,0 +1,46 @@
+footer {
+    padding: 4.5rem 0;
+    @include mobile {
+        padding: 3rem 0;
+    }
+    .container {
+        display: flex;
+        justify-content: space-between;
+        @include mobile-sm {
+            flex-direction: column;
+        }
+    }
+    p {
+        font-weight: 500;
+        font-size: 0.625rem;
+        line-height: 1.23em;
+        color: #373B42;
+        align-self: flex-end;
+        @include mobile-sm {
+            align-self: flex-start;
+            margin-top: 2rem;
+        }
+    }
+}
+
+.footer-content-block {
+    h5 {
+        font-weight: 500;
+        font-size: 0.75rem;
+        line-height: 1.25em;
+        color: #B9BABD;
+        text-transform: capitalize;
+        margin-bottom: 1rem;
+    }
+
+    li {
+        font-weight: 500;
+        font-size: 0.75rem;
+        line-height: 1.25em;
+        color: #383C43;
+        margin-bottom: 0.75rem;
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}

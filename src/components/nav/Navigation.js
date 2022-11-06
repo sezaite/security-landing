@@ -21,7 +21,13 @@ const NAV_LINKS = [{id: 'features', name: 'Features', link: '#', }, {id: 'pricin
             
             </ul>
             <a href="#" className="button button--primary button--sm">Open Vault</a>
+    
         </div>
+        <button className="main-nav__toggler">
+                <span></span>
+                <span></span>
+                <span></span>
+        </button>
         </div> 
     </nav>
   )

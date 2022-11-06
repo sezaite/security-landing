@@ -22,6 +22,9 @@ h1 {
     @include tablet-lg {
         font-size: 2rem;
     }
+    @include tablet {
+        font-size: 1.8rem;
+    }
 }
 
 h2 {
@@ -29,6 +32,12 @@ h2 {
     line-height: 1.3333em;
     @include desktop {
         font-size: 2rem;
+    }
+    @include tablet {
+        font-size: 1.6rem;
+    }
+    @include mobile {
+        font-size: 1.2rem;
     }
 }
 

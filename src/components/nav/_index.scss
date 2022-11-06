@@ -15,13 +15,57 @@
         align-items: center;
     }
 
+    &__toggler {
+        display: none;
+        position: relative;
+        width: 3rem;
+        height: 1rem;
+
+        span {
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: $accent;
+            &:first-of-type {
+                top: 0;
+            }
+            &:nth-of-type(2){
+                top: calc(50% - 1px);
+            }
+
+            &:last-of-type {
+                bottom: 0;
+            }
+        }
+        
+
+
+        @include tablet {
+            display: block;
+        }
+    }
+
     &__links {
         display: flex;
         align-items: center;
-
+        @include tablet {
+            flex-direction: column;
+            position: fixed;
+            right: 0;
+            height: 100vh;
+            width: 50vw;
+            background-color: #fff;
+            transform: translateX(100%);
+        }
+        @include tablet {
+            width: 100vh;
+        }
         ul {
             display: flex;
             align-items: center;
+            @include tablet {
+                flex-direction: column;
+            }
         }
     }
 
