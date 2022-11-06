@@ -1,9 +1,16 @@
 import React from 'react'
 
-const Faq = () => {
+export const Faq = () => {
   return (
-    <div>Faq</div>
+    <section className='section section--grey'>
+      <div className="container container--sm">
+        <h2 className="section__title">
+          Frequently asked questions
+        </h2>
+        <div className="accordion accordion--faq">
+          ACCORDION PLACEHOLDER
+        </div>
+      </div>
+    </section>
   )
 }
-
-export default Faq

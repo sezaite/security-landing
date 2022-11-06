@@ -1,0 +1,10 @@
+.select {
+    border: 1px solid #B9BABD;
+    border-radius: $theme-radius;
+    width: 100%;
+    
+    &--sm {
+        max-width: 16.3125rem;
+        height: 2.625rem;
+    }
+}

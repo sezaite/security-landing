@@ -6,7 +6,9 @@ function App() {
   return (
     <>
       <Navigation/>
-      <Hero></Hero>
+      <Hero/>
+      <Passwords/>
+      <Faq/>
     </>
 
   );

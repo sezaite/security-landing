@@ -4,7 +4,7 @@ import herobg from '../../../assets/img/hero-bg.png'
 
 export const Hero = () => {
   return (
-    <section className='hero-section'>
+    <section className='section section--hero'>
       <div className="container hero-container">
         <div className="hero-container__info">
           <h1>Get your passwords organized </h1>

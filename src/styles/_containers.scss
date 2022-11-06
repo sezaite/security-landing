@@ -1,6 +1,6 @@
 .container {
     width: 100%;
-    max-width: 72.75rem;
+    max-width: 72.875rem;
     margin: 0 auto;
     padding: 0 1rem;
 
@@ -18,5 +18,12 @@
 
     @include mobile {
         max-width: unset;
+    }
+}
+
+.container--sm {
+    max-width: 48.625rem;
+    @include desktop {
+        max-width: 50rem;
     }
 }
