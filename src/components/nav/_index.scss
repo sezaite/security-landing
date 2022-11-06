@@ -10,6 +10,7 @@
     z-index: 3;
     &.scrolled {
         background-color: #fff;
+        box-shadow: $secondary-shadow;
     }
 
     .container {

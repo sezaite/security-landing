@@ -10,17 +10,17 @@ const [isScrolled, setIsScrolled] = useState(false);
 
 useEffect(()=>{
     window.addEventListener('scroll', ()=>{
-        // todo:
-
-        if (!isScrolled && document.body.scrollTop === 0) {
+        if (window.pageYOffset && !isScrolled) {
             setIsScrolled(true);
-        }
+            return;
+        } 
+        if (!window.pageYOffset) {
+            setIsScrolled(false);
+            return;
+        }   
     })
 }, [])
   return (
-
-  
-
     <nav className={isScrolled ? 'main-nav scrolled' : 'main-nav'}>
         <div className="container">
         <a href="/" className='main-nav__logo'><img src={logo} alt="nord logo" /></a>
