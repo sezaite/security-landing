@@ -8,6 +8,7 @@
     width: 100%;
     left: 0;
     z-index: 3;
+    transition: $transition-all;
     &.scrolled {
         background-color: #fff;
         box-shadow: $secondary-shadow;
