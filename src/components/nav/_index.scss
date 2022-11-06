@@ -8,6 +8,9 @@
     width: 100%;
     left: 0;
     z-index: 3;
+    &.scrolled {
+        background-color: #fff;
+    }
 
     .container {
         display: flex;

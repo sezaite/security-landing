@@ -1,11 +1,27 @@
+import { useEffect, useState } from 'react';
 import logo from '../../assets/img/icons/logo.svg'
-
-export const Navigation = () => {
 
 const NAV_LINKS = [{id: 'features', name: 'Features', link: '#', }, {id: 'pricing', name: 'Pricing', link: '#', }, {id: 'apps', name: 'Apps', link: '#', }, {id: 'blog', name: 'Blog', link: '#', }, {id:'help', name: 'Help', link: '#', }];
 
+
+export const Navigation = () => {
+
+const [isScrolled, setIsScrolled] = useState(false);
+
+useEffect(()=>{
+    window.addEventListener('scroll', ()=>{
+        // todo:
+
+        if (!isScrolled && document.body.scrollTop === 0) {
+            setIsScrolled(true);
+        }
+    })
+}, [])
   return (
-    <nav className='main-nav'>
+
+  
+
+    <nav className={isScrolled ? 'main-nav scrolled' : 'main-nav'}>
         <div className="container">
         <a href="/" className='main-nav__logo'><img src={logo} alt="nord logo" /></a>
         <div className="main-nav__links">
