@@ -5,9 +5,11 @@
         border-radius: $theme-radius;
         background-color: $white;
         box-shadow: $primary-shadow;
-
+        transition: $transition-all;
+        overflow: hidden;
         .accordion__toggler {
             position: relative;
+            cursor: pointer;
             h6 {
                 font-weight: 700;
                 font-size: 1rem;
@@ -34,6 +36,7 @@
         }
 
         .accordion__content {
+            
             p {
                 margin-top: 1rem;
                 max-width: 83%;
@@ -46,10 +49,6 @@
         &.collapsed {
             .accordion__toggler:after {
                 transform: translateY(-50%) rotate(0);
-            }
-            .accordion__content {
-               height: 0;
-               overflow: hidden;
             }
         }
     }

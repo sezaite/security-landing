@@ -7,6 +7,7 @@ const NAV_LINKS = [{id: 'features', name: 'Features', link: '#', }, {id: 'pricin
 export const Navigation = () => {
 
 const [isScrolled, setIsScrolled] = useState(false);
+const [isCollapsed, setIsCollapsed] = useState(true);
 
 useEffect(()=>{
     window.addEventListener('scroll', ()=>{
@@ -20,11 +21,25 @@ useEffect(()=>{
         }   
     })
 }, [])
+
+useEffect(()=> {
+    if(isCollapsed && document.body.classList.contains('filter-on')) {
+        document.body.classList.remove('filter-on');
+        return;
+    } 
+    if(!isCollapsed && !document.body.classList.contains('filter-on')) {
+        document.body.classList.add('filter-on');
+        return;
+    } 
+   
+}, [isCollapsed]);
+
+
   return (
     <nav className={isScrolled ? 'main-nav scrolled' : 'main-nav'}>
         <div className="container">
         <a href="/" className='main-nav__logo'><img src={logo} alt="nord logo" /></a>
-        <div className="main-nav__links">
+        <div className={isCollapsed ? 'main-nav__links collapsed' : 'main-nav__links'}>
             <ul>
                 {
                     NAV_LINKS.map(({ id, name, link })=>(
@@ -39,10 +54,12 @@ useEffect(()=>{
             <a href="#" className="button button--primary button--sm">Open Vault</a>
     
         </div>
-        <button className="main-nav__toggler">
-                <span></span>
-                <span></span>
-                <span></span>
+        <button type='button' id="burger" className={isCollapsed ? 'main-nav__toggler collapsed' : 'main-nav__toggler'} onClick={()=>{setIsCollapsed(!isCollapsed)}}>
+                <label htmlFor="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label> 
         </button>
         </div> 
     </nav>
