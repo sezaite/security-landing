@@ -23,6 +23,7 @@
 
     &__logo {
         position: relative;
+        line-height: 0;
         z-index: 3;
     }
     &__links {
@@ -44,6 +45,7 @@
             overflow-y: auto;
             &.collapsed {
                 right: -120%;
+                opacity: 0;
             }
 
         }

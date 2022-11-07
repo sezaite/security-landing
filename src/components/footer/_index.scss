@@ -29,7 +29,7 @@ footer {
         font-size: 0.75rem;
         line-height: 1.25em;
         color: #B9BABD;
-        text-transform: capitalize;
+        text-transform: uppercase;
         margin-bottom: 1rem;
     }
 
@@ -39,6 +39,15 @@ footer {
         line-height: 1.25em;
         color: #383C43;
         margin-bottom: 0.75rem;
+        a {
+            transition: $transition-all;
+        }
+        &:hover {
+            a {
+                color: $accent;
+            }
+          
+        }
         &:last-of-type {
             margin-bottom: 0;
         }

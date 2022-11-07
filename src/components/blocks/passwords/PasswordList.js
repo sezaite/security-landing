@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useRef, useState } from "react"
 
 
 export const PasswordList = ({data, sort}) => {
@@ -14,10 +14,25 @@ switch(sort) {
       console.error('Err: unrecognized sort type');
   }
 
+const handleClick = () => {
+    setShowAll(!showAll);
+    !buttonClicked && setButtonClicked(true);
+}
+
 const [showAll, setShowAll] = useState(false);
+const [buttonClicked, setButtonClicked] = useState(false);
+
+const ref = useRef(null);
+
+useEffect(()=> {
+   if (buttonClicked && !showAll) {
+        window.scrollTo({ behavior: 'smooth', top: ref.current.offsetTop - 150 })
+   } 
+}, [showAll])
+
     return (
         <>
-            <table className="password-list-table">
+            <table className="password-list-table" ref={ref}>
                 <tbody>
                 {
                         showAll ? 
@@ -46,7 +61,7 @@ const [showAll, setShowAll] = useState(false);
         
                 
             </table>     
-            <button type='button' className='button button--primary mx-auto' onClick={(e) => setShowAll(!showAll)}>{showAll ? 'Show less' : 'Show all (50)'}</button>
+            <button type='button' className='button button--primary mx-auto' onClick={(e) => handleClick()}>{showAll ? 'Show less' : 'Show all (50)'}</button>
         </>
     
     )

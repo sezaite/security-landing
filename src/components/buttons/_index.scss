@@ -9,6 +9,8 @@ button {
 
 .button {
     cursor: pointer;
+    user-select: none;
+    transition: $transition-all;
     &--primary {
         display: flex;
         align-items: center;
@@ -17,7 +19,7 @@ button {
         border-radius: $theme-radius;
         color: $white;
         font-weight: 700;
-        padding: 0.75rem 1.5rem;
+        padding: 0.8rem 1.5rem 0.7rem 1.5rem;
         font-size: 1.25rem;
         line-height: 1.5em;
         border: 2px solid $accent;
@@ -32,7 +34,7 @@ button {
 
     &--sm {
         font-size: 0.75rem;
-        padding: 0 1rem;
+        padding: 0.2rem 1rem 0 1rem;
         height: 2rem;
     }
 

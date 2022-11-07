@@ -2,11 +2,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     h4 {
         margin-right: 2rem;
         @include mobile {
-            font-size: 1rem;
+            font-size: 0.9rem;
         }
     }
     select.select {
@@ -21,6 +20,9 @@
     border-top: $table-border;
     margin-top: 1.9375rem;
     margin-bottom: 2.25rem;
+    @include mobile {
+        margin-top: 1rem;
+    }
     tr {
        
         td {
@@ -30,9 +32,13 @@
             line-height: 1.5em;
             @include mobile {
                 font-size: 0.8rem;
+                padding: 1rem 0;
             }
             &:first-of-type {
                 width: 40px;
+                @include mobile-sm {
+                    width: 28px;
+                }
             }
             &:nth-of-type(2) {
                 font-weight: 700;

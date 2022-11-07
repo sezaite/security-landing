@@ -2,18 +2,25 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    vertical-align:baseline;
 }
+
+html {
+    scroll-behavior: smooth;
+  }
 
 body {
     overflow-x: hidden;
     &.filter-on {
         @include tablet {
-            overflow: hidden;
+            overflow-y: hidden;
             height: 100vh;
         }
         
       }
 }
+
+
 
 ul {
     list-style: none;

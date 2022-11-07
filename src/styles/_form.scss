@@ -11,10 +11,14 @@
     background-repeat: no-repeat;
     background-position: 95% center;
     background-size: 8px 5px;
-
+    background-color: $white;
     &--sm {
         max-width: 16.3125rem;
         padding: 7px 18px 7px 15px;
+        @include mobile-sm {
+            font-size: 0.9rem;
+            padding: 4px 12px 4px 10px;
+        }
     }
 }
 

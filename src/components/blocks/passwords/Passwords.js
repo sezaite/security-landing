@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import useFetch from '../../../helpers/useFetch';
 import { PasswordList } from './PasswordList'
 
 
 
 export const Passwords = () => {
-  const { data, isFetching, error } = useFetch(`https://playground.nordsec.com/v2/worst-psw.json`);
+  const { data, isFetching} = useFetch(`https://playground.nordsec.com/v2/worst-psw.json`);
   const [sortType, setSortType] = useState('count');
   
   return (
-    <section className='section'>
+    <section className='section' id="top-leaked-passwords">
       <div className="container container--sm">
         <h2 className="section__title">
           Top leaked passwords
