@@ -1,18 +1,9 @@
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react";
+import dataSort from "../../helpers/sort";
 
+export const SortableTable = ({data, sort}) => {
 
-export const PasswordList = ({data, sort}) => {
-
-switch(sort) {
-    case 'count':
-      data.passwords.sort((a, b) => b.count - a.count);
-      break;
-    case 'abc':
-      data.passwords.sort((a, b) => a.value.localeCompare(b.value));
-      break;
-    default:
-      console.error('Err: unrecognized sort type');
-  }
+const sortedData = dataSort(data.passwords, sort);
 
 const handleClick = () => {
     setShowAll(!showAll);
@@ -32,12 +23,12 @@ useEffect(()=> {
 
     return (
         <>
-            <table className="password-list-table" ref={ref}>
+            <table className="sortable-table" ref={ref}>
                 <tbody>
                 {
                         showAll ? 
 
-                        data.passwords.map((data, index)=> (
+                        sortedData.map((data, index)=> (
                             <tr key={data.value}>
                                 <td>{index + 1}.</td>
                                 <td>{data.value}</td>
@@ -45,7 +36,7 @@ useEffect(()=> {
                             </tr>
                         )) :
 
-                        data.passwords.slice(0, 10).map((data, index)=> (
+                        sortedData.slice(0, 10).map((data, index)=> (
 
                             <tr key={data.value}>
                                 <td>{index + 1}.</td>

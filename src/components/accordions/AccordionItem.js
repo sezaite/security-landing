@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react'
 
-export const FaqListItem = ({answers, question, id, onToggle, active}) => {
+export const AccordionItem = ({togglerText, contentText, id, onToggle, active}) => {
   const toggler = useRef(null);
   const content = useRef(null);
 
@@ -17,23 +17,21 @@ export const FaqListItem = ({answers, question, id, onToggle, active}) => {
     window.addEventListener('resize', ()=> {
       calculateAccordionItemHeight();
     })
-   
-  }, []);
+  }, [togglerHeight]);
 
   
   return (
     <div className={active ? "accordion__item" : "accordion__item collapsed" } style={{height: active ? `${togglerHeight + contentHeight}px` : `${togglerHeight}px`}} >
     <div className="accordion__toggler" onClick={() =>  onToggle(id)} ref={toggler}>
-        <h6>{question}</h6>
+        <h6>{togglerText}</h6>
     </div>
     <div className="accordion__content" ref={content}>
       {
-      answers.map((answer, index) => (
+     contentText.map((answer, index) => (
         <p key={answer+index}>
           {answer}
         </p>
-      )
-      )
+      ))
       }
     </div>
  </div>

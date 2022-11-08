@@ -3,7 +3,6 @@ import logo from '../../assets/img/icons/logo.svg'
 
 const NAV_LINKS = [{id: 'features', name: 'Features', link: '#', }, {id: 'pricing', name: 'Pricing', link: '#', }, {id: 'apps', name: 'Apps', link: '#', }, {id: 'blog', name: 'Blog', link: '#', }, {id:'help', name: 'Help', link: '#', }];
 
-
 export const Navigation = () => {
 
 const [isScrolled, setIsScrolled] = useState(false);

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import useFetch from '../../../helpers/useFetch';
-import { PasswordList } from './PasswordList'
-
+import { SortableTable } from '../../../components';
 
 export const Passwords = () => {
   const { data, isFetching} = useFetch(`https://playground.nordsec.com/v2/worst-psw.json`);
@@ -21,9 +20,8 @@ export const Passwords = () => {
           </select>
         </div>
         {
-        isFetching ? <div className="loader">Loading...</div> : 
-      
-        <PasswordList data={data} sort={sortType}/>
+          isFetching ? <div className="loader">Loading...</div> : 
+          <SortableTable data={data} sort={sortType} />
         }
       </div>
     </section>
