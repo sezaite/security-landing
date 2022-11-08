@@ -16,6 +16,7 @@ h1 {
     font-size: 3rem;
     line-height: 1.3333em;
     letter-spacing: -0.35px;
+    color: $black;
     @include desktop {
         font-size: 2.5rem;
     }
