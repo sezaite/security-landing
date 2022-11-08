@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/security-landing/static/css/main.5082a75c.css",
+    "main.css": "/security-landing/static/css/main.437ddacf.css",
     "main.js": "/security-landing/static/js/main.49f5b42a.js",
     "static/media/Gordita-Medium.otf": "/security-landing/static/media/Gordita-Medium.57ad2e0b7fce1864eef9.otf",
     "static/media/Gordita-Bold.otf": "/security-landing/static/media/Gordita-Bold.933dc82c419ccef42c6f.otf",
@@ -11,11 +11,11 @@
     "index.html": "/security-landing/index.html",
     "static/media/chevron-down.svg": "/security-landing/static/media/chevron-down.efc29f884c6bec43ee56.svg",
     "static/media/chevron-down-trangle.svg": "/security-landing/static/media/chevron-down-trangle.448297ed9f5dbfa2e2e6.svg",
-    "main.5082a75c.css.map": "/security-landing/static/css/main.5082a75c.css.map",
+    "main.437ddacf.css.map": "/security-landing/static/css/main.437ddacf.css.map",
     "main.49f5b42a.js.map": "/security-landing/static/js/main.49f5b42a.js.map"
   },
   "entrypoints": [
-    "static/css/main.5082a75c.css",
+    "static/css/main.437ddacf.css",
     "static/js/main.49f5b42a.js"
   ]
 }
