@@ -52,7 +52,7 @@ useEffect(()=> {
         
                 
             </table>     
-            <button type='button' className='button button--primary mx-auto' onClick={(e) => handleClick()}>{showAll ? 'Show less' : 'Show all (50)'}</button>
+            <button type='button' className='button button--primary button--md mx-auto' onClick={(e) => handleClick()}>{showAll ? 'Show less' : 'Show all (50)'}</button>
         </>
     
     )

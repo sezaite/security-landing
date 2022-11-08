@@ -8,7 +8,7 @@ export const Passwords = () => {
   
   return (
     <section className='section' id="top-leaked-passwords">
-      <div className="container container--sm">
+      <div className="container">
         <h2 className="section__title">
           Top leaked passwords
         </h2>
