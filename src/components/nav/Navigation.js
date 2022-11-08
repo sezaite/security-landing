@@ -22,19 +22,6 @@ useEffect(()=>{
     })
 }, [])
 
-useEffect(()=> {
-    if(isCollapsed && document.body.classList.contains('filter-on')) {
-        document.body.classList.remove('filter-on');
-        return;
-    } 
-    if(!isCollapsed && !document.body.classList.contains('filter-on')) {
-        document.body.classList.add('filter-on');
-        return;
-    } 
-   
-}, [isCollapsed]);
-
-
   return (
     <nav className={isScrolled ? 'main-nav scrolled' : 'main-nav'}>
         <div className="container">

@@ -3,7 +3,6 @@ import useFetch from '../../../helpers/useFetch';
 import { PasswordList } from './PasswordList'
 
 
-
 export const Passwords = () => {
   const { data, isFetching} = useFetch(`https://playground.nordsec.com/v2/worst-psw.json`);
   const [sortType, setSortType] = useState('count');

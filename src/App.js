@@ -1,7 +1,7 @@
 import './App.scss';
 import {Faq, Passwords, Hero} from './components/blocks';
-import { Footer } from './components/footer/Footer';
-import {Navigation} from './components/nav/Navigation';
+import { Footer, Navigation } from './components';
+
 
 function App() {
   return (

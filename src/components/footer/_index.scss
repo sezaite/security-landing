@@ -1,8 +1,9 @@
 footer {
     padding: 4.5rem 0;
-    @include mobile {
+    @include tablet {
         padding: 3rem 0;
     }
+   
     .container {
         display: flex;
         justify-content: space-between;

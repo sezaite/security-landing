@@ -4,7 +4,7 @@
         padding: 4rem 0 6rem 0;
     }
     @include mobile {
-        padding: 3rem 0 6rem 0;
+        padding: 3rem 0 5rem 0;
     }
     &__title {
         margin-bottom: 3.75rem;
@@ -27,5 +27,13 @@
     padding-bottom: 2rem;
     @include tablet-lg {
         padding-top: 7rem;
+        padding-bottom: 0;
+    }
+    @include tablet {
+        padding-top: 5rem;
+    }
+    @include mobile {
+        padding-top: 7rem;
+        padding-bottom: 4rem;
     }
 }
