@@ -27,6 +27,10 @@ button {
             background-color: transparent;
             color: $accent;
         }
+        @media (hover: none) {
+            background-color: transparent;
+            color: $accent;
+        }
         @include tablet-lg {
             font-size: 1.1rem;
             padding: 0.65rem 1.3rem 0.55rem 1.3rem;
