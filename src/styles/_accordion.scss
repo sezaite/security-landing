@@ -73,6 +73,7 @@
             
             .accordion__content {
                 opacity: 0;
+                height: fit-content;
                 transition: $transition-all;
             }
         }
