@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/security-landing/static/css/main.d400bd27.css",
+    "main.js": "/security-landing/static/js/main.d354f19c.js",
+    "static/media/Gordita-Medium.otf": "/security-landing/static/media/Gordita-Medium.57ad2e0b7fce1864eef9.otf",
+    "static/media/Gordita-Bold.otf": "/security-landing/static/media/Gordita-Bold.933dc82c419ccef42c6f.otf",
+    "static/media/Gordita-Light.otf": "/security-landing/static/media/Gordita-Light.dd77b5c856048c4a0679.otf",
+    "static/media/Gordita-Regular.otf": "/security-landing/static/media/Gordita-Regular.9a1fe35dd5c9e2a6ef9a.otf",
+    "static/media/hero-img.png": "/security-landing/static/media/hero-img.3af081b93436f77d4d38.png",
+    "static/media/logo.svg": "/security-landing/static/media/logo.82b22e51bc4ef9404f5e1b19c4368730.svg",
+    "index.html": "/security-landing/index.html",
+    "static/media/chevron-down.svg": "/security-landing/static/media/chevron-down.efc29f884c6bec43ee56.svg",
+    "static/media/chevron-down-trangle.svg": "/security-landing/static/media/chevron-down-trangle.448297ed9f5dbfa2e2e6.svg",
+    "main.d400bd27.css.map": "/security-landing/static/css/main.d400bd27.css.map",
+    "main.d354f19c.js.map": "/security-landing/static/js/main.d354f19c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d400bd27.css",
+    "static/js/main.d354f19c.js"
+  ]
+}
