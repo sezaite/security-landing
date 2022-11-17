@@ -25,19 +25,8 @@ useEffect(()=> {
         <>
             <table className="sortable-table" ref={ref}>
                 <tbody>
-                {
-                        showAll ? 
-
-                        sortedData.map((data, index)=> (
-                            <tr key={data.value}>
-                                <td>{index + 1}.</td>
-                                <td>{data.value}</td>
-                                <td>{data.count}</td>
-                            </tr>
-                        )) :
-
-                        sortedData.slice(0, 10).map((data, index)=> (
-
+                {     
+                    sortedData.slice(0, (showAll? sortedData.length : 10)).map((data, index)=> (
                             <tr key={data.value}>
                                 <td>{index + 1}.</td>
                                 <td>{data.value}</td>
@@ -45,14 +34,10 @@ useEffect(()=> {
                             </tr>
                         ))
 
-
                     }
                 </tbody>
-                    
-        
-                
             </table>     
-            <button type='button' className='button button--primary button--md mx-auto' onClick={(e) => handleClick()}>{showAll ? 'Show less' : 'Show all (50)'}</button>
+            <button type='button' className='button button--primary button--md mx-auto' onClick={(e) => handleClick()}>{showAll ? 'Show less' : `Show all (${sortedData.length})`}</button>
         </>
     
     )
